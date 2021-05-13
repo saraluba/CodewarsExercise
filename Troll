@@ -1,0 +1,22 @@
+
+// We can use .replaceAll()
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Troll {
+    public static String disemvowel(String str) {
+        String result = "";
+        char sign;
+        int a; //ascii code
+        List<Integer> vowels = Arrays.asList(65, 69, 73, 79, 85, 97, 101, 105, 111, 117);
+        for(int i=0; i< str.length(); i++){
+            sign = str.charAt(i);
+            a = (int)sign;
+            if (vowels.contains(a)) {
+                continue;
+            }
+            result += sign;
+        }
+        return result;
+    }
